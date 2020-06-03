@@ -1,0 +1,47 @@
+.main-nav {
+	margin-left: 92px;
+	max-width: 186px;
+	ul {
+		padding-left: 25px;
+		margin: 0;
+		list-style-type: none;
+		background-image: url('../../../assets/images/dotted-line.svg');
+		background-size: cover;
+		background-position: center;
+		display: block;
+		li {
+			margin-bottom: 20px;
+			a {
+				position: relative;
+				font-size: 20px;
+				color: $text;
+				transition: ease-in 0.3s;
+				&::before {
+					content: '';
+					display: block;
+					height: 16px;
+					width: 16px;
+					border-radius: 50%;
+					background-color: #9ABFB6;
+					position: absolute;
+					top: 50%;
+					left: -25px;
+					transform: translate3d(0, -50%, 0);
+				}
+				&:not(.disabled) {
+					&:hover {
+						color: $primary;
+					}
+				}
+				&.current {
+					&::before {
+						background-color: $secondary;
+					}
+				}
+				&.disabled {
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+}

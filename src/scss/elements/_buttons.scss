@@ -1,0 +1,14 @@
+.button {
+	border-radius: 20.4px;
+
+	// Header button.
+	&.button-header {
+		background-color: $secondary;
+		color: #fff;
+		padding: 12px 38px;
+		margin: 10px auto 0 auto;
+		@media (min-width: $lg_breakpoint) {
+			margin: 0;
+		}
+	}
+}

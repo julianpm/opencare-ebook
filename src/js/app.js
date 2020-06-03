@@ -6,4 +6,17 @@ $(document).ready(function() {
 	var year = d.getFullYear();
 	$date.html(year);
 
+	// Main Navigation.
+	$('.main-nav-link').on('click', function(e) {
+
+		e.preventDefault();
+
+		var $current = $('.current');
+
+		if ( ! $(this).hasClass('disabled') ) {
+			$current.removeClass('current');
+			$(this).addClass('current');
+		}
+	});
+
 });

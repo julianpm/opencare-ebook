@@ -4,7 +4,41 @@
 	src: url('../../../assets/fonts/OpenSans/OpenSans-Regular-webfont.woff');
 }
 
+@font-face {
+	font-family: 'CircularBlack';
+	src: url('../../../assets/fonts/Circular/CircularStd-Black.woff');
+}
+
+@font-face {
+	font-family: 'CircularBold';
+	src: url('../../../assets/fonts/Circular/CircularStd-Book.woff');
+}
+
 // Typography.
 p {
-	font-family: 'OpenSansRegular', sans-serif;
+	header &,
+	footer & {
+		margin: 0;
+	}
+	header & {
+		font-family: 'CircularBook', sans-serif;
+		color: $text;
+	}
+	footer & {
+		font-family: 'OpenSansRegular', sans-serif;
+		color: #F8F8F5;
+	}
+}
+
+a {
+	font-family: 'CircularBlack', sans-serif;
+	text-decoration: none;
+	&.main-nav-link {
+		span {
+			font-family: 'OpenSansRegular', sans-serif;
+			font-size: 14px;
+			display: block;
+			margin-top: 10px;
+		}
+	}
 }
