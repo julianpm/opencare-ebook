@@ -65,7 +65,7 @@ $(document).ready(function() {
 
 	});
 
-	$(document).on('click', '.main-content_content a', function(e) {
+	$(document).on('click', '.main-content_content .tab-link', function(e) {
 
 		e.preventDefault();
 
@@ -85,21 +85,6 @@ $(document).ready(function() {
 				}
 
 			});
-
-
-			// var href = $(this).find('')
-
-
-			// 	if ( $(this).find('a').attr('href') = attr ) {
-			// 		$link.addClass('active');
-			// 	}
-
-			// 	// var href = $(this).find('a').attr('href')
-
-			// 	// if ( href === attr ) {
-			// 	// 	console.log(href);
-			// 	// }
-			// });
 		}
 	});
 

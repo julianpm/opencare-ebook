@@ -62,10 +62,10 @@ body {
 }
 
 .main-content {
+	border-radius: 41px;
 	> div {
 		display: none;
 		background-color: #fff;
-		border-radius: 41px;
 		overflow: hidden;
 		&.active {
 			display: block;
