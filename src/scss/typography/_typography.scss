@@ -15,7 +15,14 @@
 }
 
 // Typography.
+h2,
+h3,
+h4 {
+	font-family: 'CircularBlack', sans-serif;
+}
+
 p {
+	font-family: 'OpenSansRegular', sans-serif;
 	header &,
 	footer & {
 		margin: 0;
@@ -25,7 +32,6 @@ p {
 		color: $text;
 	}
 	footer & {
-		font-family: 'OpenSansRegular', sans-serif;
 		color: #F8F8F5;
 	}
 }
@@ -33,6 +39,7 @@ p {
 a {
 	font-family: 'CircularBlack', sans-serif !important;
 	text-decoration: none;
+	color: $primary;
 }
 
 .main-nav {
