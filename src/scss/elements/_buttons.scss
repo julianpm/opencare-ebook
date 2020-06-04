@@ -12,3 +12,12 @@
 		}
 	}
 }
+
+.flyout-toggle {
+	position: absolute;
+	left: 5px;
+	bottom: 5px;
+	@media (min-width: $md_breakpoint) {
+		display: none;
+	}
+}

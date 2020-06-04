@@ -19,14 +19,13 @@ $(document).ready(function() {
 		}
 	});
 
+	// Flyout Toggle.
+	$(document).on('click', '.flyout-toggle', function() {
 
+		var nav = $('.main-nav');
+		nav.toggleClass('active');
 
-
-
-
-
-
-
+	});
 
 	// Modal Toggle.
 	$(document).on('click', '.disabled', function(e) {

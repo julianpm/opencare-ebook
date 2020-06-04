@@ -1,7 +1,15 @@
 .main-nav {
-	margin-left: 92px;
+	border: 1px solid red;
+	position: absolute;
+	top: 0;
+	left: -220px;
+	padding: 8px;
+	background-color: #fff;
 	max-width: 186px;
-	flex: 1;
+	transition: 0.3s ease-in-out;
+	&.active {
+		left: 0;
+	}
 	ul {
 		padding-left: 25px;
 		margin: 0;
@@ -57,5 +65,11 @@
 				}
 			}
 		}
+	}
+	@media (min-width: $md_breakpoint) {
+		position: static;
+		margin-left: 92px;
+		flex: 1;
+		padding: 0;
 	}
 }
