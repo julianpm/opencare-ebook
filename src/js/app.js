@@ -19,4 +19,29 @@ $(document).ready(function() {
 		}
 	});
 
+	// Modal Toggle.
+	$(document).on('click', '.disabled', function(e) {
+
+		e.preventDefault();
+
+		$('.modal').css('display', 'block');
+		$('body').addClass('modal-active');
+
+	});
+
+	$(document).on('click', '.modal-close', function() {
+
+		$('.modal').css('display', 'none');
+		$('body').removeClass('modal-active');
+
+	});
+
+	$(document).on('click', '.modal-signup', function() {
+
+		$('.modal').css('display', 'none');
+		$('body').removeClass('modal-active');
+		$('.disabled').removeClass('disabled');
+
+	});
+
 });
