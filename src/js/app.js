@@ -19,6 +19,15 @@ $(document).ready(function() {
 		}
 	});
 
+
+
+
+
+
+
+
+
+
 	// Modal Toggle.
 	$(document).on('click', '.disabled', function(e) {
 

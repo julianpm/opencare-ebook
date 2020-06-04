@@ -1,44 +1,58 @@
 .main-nav {
 	margin-left: 92px;
 	max-width: 186px;
+	flex: 1;
 	ul {
 		padding-left: 25px;
 		margin: 0;
 		list-style-type: none;
-		background-image: url('../../../assets/images/dotted-line.svg');
+		background-image: url(dotted-line.svg);
 		background-size: cover;
 		background-position: center;
 		display: block;
-		li {
+		position: relative;
+		svg {
+			position: absolute;
+			top: 5px;
+			left: 6px;
+			height: 655px;
+		}
+		.main-nav-link {
+			position: relative;
+			font-size: 20px;
 			margin-bottom: 20px;
 			a {
-				position: relative;
-				font-size: 20px;
 				color: $text;
 				transition: ease-in 0.3s;
-				&::before {
-					content: '';
-					display: block;
-					height: 16px;
-					width: 16px;
-					border-radius: 50%;
-					background-color: #9ABFB6;
-					position: absolute;
-					top: 50%;
-					left: -25px;
-					transform: translate3d(0, -50%, 0);
-				}
-				&:not(.disabled) {
+			}
+			&::before {
+				content: '';
+				display: block;
+				height: 16px;
+				width: 16px;
+				border-radius: 50%;
+				background-color: #9ABFB6;
+				position: absolute;
+				top: 4px;
+				left: -25px;
+			}
+			&:not(.disabled) {
+				a {
 					&:hover {
 						color: $primary;
 					}
 				}
-				&.current {
-					&::before {
-						background-color: $secondary;
-					}
+			}
+			&.current {
+				a {
+					color: $secondary;
 				}
-				&.disabled {
+				&::before {
+					background-color: $secondary;
+				}
+			}
+			&.disabled {
+				span {
 					opacity: 0.5;
 				}
 			}

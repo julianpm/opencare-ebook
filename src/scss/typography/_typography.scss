@@ -31,10 +31,13 @@ p {
 }
 
 a {
-	font-family: 'CircularBlack', sans-serif;
+	font-family: 'CircularBlack', sans-serif !important;
 	text-decoration: none;
-	&.main-nav-link {
-		span {
+}
+
+.main-nav {
+	li {
+		> span {
 			font-family: 'OpenSansRegular', sans-serif;
 			font-size: 14px;
 			display: block;

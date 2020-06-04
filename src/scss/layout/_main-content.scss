@@ -3,7 +3,7 @@ body {
 		overflow: hidden;
 		&::before {
 			content: '';
-			position: absolute;
+			position: fixed;
 			top: 0;
 			bottom: 0;
 			left: 0;
@@ -14,27 +14,58 @@ body {
 	}
 }
 
-.main-content {
+.main-content-wrapper {
 	position: relative;
 	padding: 84px 0 67px 0;
 	overflow: hidden;
+	display: flex;
 	.fern-bottom-small,
 	.fern-bottom-big,
 	.fern-top {
-		position: absolute;
+		display: none;
 	}
-	.fern-top {
-		top: -100px;
-		left: 237px;
+	@media (min-width: 768px) {
+		.fern-bottom-small,
+		.fern-bottom-big,
+		.fern-top {
+			display: block;
+			position: absolute;
+		}
+		.fern-top {
+			top: -100px;
+			left: 80px;
+		}
+		.fern-bottom-small {
+			bottom: -2px;
+			right: 50px;
+			max-width: 101px;
+		}
+		.fern-bottom-big {
+			bottom: -195px;
+			right: 25px;
+			max-width: 302px;
+		}
 	}
-	.fern-bottom-small {
-		bottom: -2px;
-		right: 100px;
-		max-width: 101px;
+	@media (min-width: 1000px) {
+		.fern-top {
+			left: 237px;
+		}
+		.fern-bottom-small {
+			right: 100px;
+		}
+		.fern-bottom-big {
+			right: 75px;
+		}
 	}
-	.fern-bottom-big {
-		right: 75px;
-		bottom: -195px;
-		max-width: 302px;
+}
+
+.main-content {
+	border: 1px solid red;
+	max-width: 765px;
+		height: 625px;
+	margin: 17px 0 0 142px;
+	overflow: auto;
+	p {
+		margin-top: 0;
 	}
 }
