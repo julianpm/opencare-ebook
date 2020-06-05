@@ -1,11 +1,13 @@
 .main-nav {
-	position: absolute;
+	position: fixed;
 	top: 0;
+	bottom: 0;
 	left: -220px;
-	padding: 8px;
+	padding: 16px 8px;
 	background-color: #F7F9F6;
 	max-width: 186px;
 	transition: 0.3s ease-in-out;
+	z-index: 1;
 	&.active {
 		left: 0;
 	}
@@ -64,8 +66,16 @@
 	}
 	@media (min-width: $md_breakpoint) {
 		position: static;
-		margin-left: 92px;
 		flex: 1;
 		padding: 0;
+	}
+}
+
+.button-nav-wrapper {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	@media (min-width: $md_breakpoint) {
+		margin-top: 40px;
 	}
 }

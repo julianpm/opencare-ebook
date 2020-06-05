@@ -1,7 +1,8 @@
 .button {
 	border-radius: 20.4px;
+	cursor: pointer;
 
-	// Header button.
+	// Header Button.
 	&.button-header {
 		background-color: $secondary;
 		color: #fff;
@@ -9,6 +10,21 @@
 		margin: 10px auto 0 auto;
 		@media (min-width: $lg_breakpoint) {
 			margin: 0;
+		}
+	}
+
+	// Nav Button.
+	&.button-nav {
+		border: 2px solid $footer_bg;
+		padding: 10px 32px;
+		margin: 0 12px;
+		&_prev {
+			color: $footer_bg;
+			background-color: transparent;
+		}
+		&_next {
+			background-color: $footer_bg;
+			color: #fff;
 		}
 	}
 }

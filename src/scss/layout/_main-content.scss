@@ -15,9 +15,15 @@ body {
 	}
 }
 
-.main-content-wrapper {
+.container {
+	max-width: 1260px;
+	width: 95%;
+	margin: 0 auto;
+}
+
+.main {
 	position: relative;
-	padding: 30px;
+	padding: 20px 0;
 	overflow: hidden;
 	.fern-bottom-small,
 	.fern-bottom-big,
@@ -61,49 +67,71 @@ body {
 	}
 }
 
-.main-content {
-	border-radius: 41px;
-	> div {
-		display: none;
-		background-color: #fff;
-		overflow: hidden;
-		&.active {
-			display: block;
-		}
-		.main-content_header {
-			background-color: $secondary;
-			padding: 36px 80px;
-			border-top-left-radius: 41px;
-			border-top-right-radius: 41px;
-			color: #fff;
-			h2 {
-				&::before {
-					content: '';
-					display: block;
-					position: relative;
-					left: -13px;
-					height: 2px;
-					width: 38px;
-					background-color: #fff;
-					margin: 15px 0;
+.main-content-wrapper {
+	flex: 1;
+	.main-content {
+		border-radius: 41px;
+		.main-content-item {
+			display: none;
+			background-color: #fff;
+			overflow: hidden;
+			border-radius: 41px;
+			&.active {
+				display: block;
+			}
+			.main-content_header {
+				background-color: $secondary;
+				padding: 30px;
+				border-top-left-radius: 41px;
+				border-top-right-radius: 41px;
+				color: #fff;
+				h2 {
+					&::before {
+						content: '';
+						display: block;
+						position: relative;
+						height: 2px;
+						width: 38px;
+						background-color: #fff;
+						margin: 15px 0;
+					}
+				}
+				p {
+					margin: 0;
 				}
 			}
-			p {
-				margin: 0;
+			.main-content_content {
+				padding: 30px;
 			}
-		}
-		.main-content_content {
-			padding: 36px 80px;
-		}
-		p {
-			margin-top: 0;
+			p {
+				margin-top: 0;
+			}
 		}
 	}
 	@media (min-width: $md_breakpoint) {
-		flex: 1;
+		margin: 17px 0 0 20px;
+		.main-content {
+			overflow: auto;
+			height: 625px;
+			.main-content-item {
+				.main-content_header,
+				.main-content_content {
+					padding: 36px 80px;
+				}
+			}
+		}
+	}
+	@media (min-width: $lg_breakpoint) {
 		max-width: 765px;
-		height: 625px;
-		margin: 17px 0 0 142px;
-		overflow: auto;
+		margin: 17px auto 0 auto;
+		.main-content {
+			.main-content-item {
+				.main-content_header {
+					h2::before {
+						left: -13px;
+					}
+				}
+			}
+		}
 	}
 }

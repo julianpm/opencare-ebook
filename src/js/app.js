@@ -19,11 +19,36 @@ $(document).ready(function() {
 		}
 	});
 
+	// Button Navigation.
+	$(document).on('click', '.button-nav', function() {
+
+		var $active = $('.main-content-item.active');
+		var $next = $active.next('.main-content-item');
+		var $prev = $active.prev('.main-content-item');
+
+		if ( $(this).hasClass('button-nav_next') && $next.length !== 0 ) {
+			$active.removeClass('active');
+			$next.addClass('active');
+		} else if ( $(this).hasClass('button-nav_prev') && $prev.length !== 0 ) {
+			$active.removeClass('active');
+			$prev.addClass('active');
+		}
+	});
+
 	// Flyout Toggle.
 	$(document).on('click', '.flyout-toggle', function() {
 
 		var nav = $('.main-nav');
 		nav.toggleClass('active');
+
+	});
+
+	// Close Flyout Toggle.
+	$('body').on('click', function(event) {
+
+		if ( ! $(event.target).is('.main-nav') ) {
+			$('.main-nav').removeClass('active');
+		}
 
 	});
 
