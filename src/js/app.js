@@ -1,43 +1,31 @@
 $(document).ready(function() {
 
+
 	// Dynamic date.
 	var $date = $('footer .date');
 	var d = new Date();
 	var year = d.getFullYear();
 	$date.html(year);
 
-	// Main Navigation.
-	// $('.main-nav-link').each(function(index) {
-	// 	$(this).append(index);
-	// });
 
+	// Flyout Toggle.
+	$(document).on('click', '.flyout-toggle', function() {
 
-	$('.main-nav-link').on('click', function(e) {
-
-		e.preventDefault();
-
-		var $active = $('.active');
-		var foo = $active.index();
-
-		$(this).append(foo);
-
-		// var $next = $active.next('.main-nav-link');
-		// // var $index = $next.index();
-		// var foo = $(this).index();
-		// $(this).append(foo);
-
-
-
-		// $(this).append($(this.index));
-
-		// console.log($next.index());
-
-		// if ( ! $(this).hasClass('disabled') ) {
-		// 	$active.removeClass('active');
-		// 	$(this).addClass('active');
-		// }
+		var nav = $('.main-nav');
+		nav.toggleClass('active');
 
 	});
+
+
+	// Close Flyout Toggle.
+	$('body').on('click', function(event) {
+
+		if ( ! $(event.target).is('.main-nav') ) {
+			$('.main-nav').removeClass('active');
+		}
+
+	});
+
 
 	// Button Navigation.
 	$(document).on('click', '.button-nav', function() {
@@ -63,22 +51,6 @@ $(document).ready(function() {
 		}
 	});
 
-	// Flyout Toggle.
-	$(document).on('click', '.flyout-toggle', function() {
-
-		var nav = $('.main-nav');
-		nav.toggleClass('active');
-
-	});
-
-	// Close Flyout Toggle.
-	$('body').on('click', function(event) {
-
-		if ( ! $(event.target).is('.main-nav') ) {
-			$('.main-nav').removeClass('active');
-		}
-
-	});
 
 	// Modal Toggle.
 	$(document).on('click', '.disabled', function(e) {
@@ -105,17 +77,22 @@ $(document).ready(function() {
 
 	});
 
+
 	// Tabs Toggle.
 	$(document).on('click', '.main-nav-link > a', function(e) {
 
 		e.preventDefault();
-		$('.main-nav-link a').parent().removeClass('active');
-		$(this).parent().addClass('active');
-		$('.main-content > div').removeClass('active');
 
-		var id = $(this).attr('href');
-		$(id).addClass('active');
+		if ( ! $(this).parent().hasClass('disabled') ) {
 
+			$('.main-nav-link a').parent().removeClass('active');
+			$(this).parent().addClass('active');
+			$('.main-content > div').removeClass('active');
+
+			var id = $(this).attr('href');
+			$(id).addClass('active');
+
+		}
 	});
 
 	$(document).on('click', '.main-content_content .tab-link', function(e) {
@@ -140,5 +117,6 @@ $(document).ready(function() {
 			});
 		}
 	});
+
 
 });
