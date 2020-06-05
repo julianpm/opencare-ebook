@@ -66,7 +66,7 @@ $(document).ready(function() {
 
 
 	// Modal Toggle.
-	$(document).on('click', '.disabled', function(e) {
+	$(document).on('click', '.disabled > a', function(e) {
 
 		e.preventDefault();
 
