@@ -41,6 +41,7 @@
 				position: absolute;
 				top: 4px;
 				left: -25px;
+				transition: ease-in 0.3s;
 			}
 			&:not(.disabled) {
 				a {
@@ -51,7 +52,7 @@
 			}
 			&.active {
 				a {
-					color: $secondary;
+					color: $secondary !important;
 				}
 				&::before {
 					background-color: $secondary;
