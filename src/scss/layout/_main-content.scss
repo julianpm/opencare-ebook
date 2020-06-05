@@ -32,7 +32,7 @@ body {
 	}
 	@media (min-width: 768px) {
 		display: flex;
-		padding: 84px 0 67px 0;
+		padding: 84px 0 120px 0;
 		.fern-bottom-small,
 		.fern-bottom-big,
 		.fern-top {
@@ -116,7 +116,7 @@ body {
 			.main-content-item {
 				.main-content_header,
 				.main-content_content {
-					padding: 36px 80px;
+					padding: 40px;
 				}
 			}
 		}
@@ -126,6 +126,10 @@ body {
 		margin: 17px auto 0 auto;
 		.main-content {
 			.main-content-item {
+				.main-content_header,
+				.main-content_content {
+					padding: 36px 80px;
+				}
 				.main-content_header {
 					h2::before {
 						left: -13px;
