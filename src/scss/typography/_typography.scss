@@ -6,19 +6,26 @@
 
 @font-face {
 	font-family: 'CircularBlack';
-	src: url('../assets/fonts/Circular/CircularStd-Black.woff');
+	src: url('../fonts/Circular/CircularStd-Black.woff');
 }
 
 @font-face {
 	font-family: 'CircularBold';
-	src: url('../assets/fonts/Circular/CircularStd-Book.woff');
+	src: url('../fonts/Circular/CircularStd-Book.woff');
 }
 
 // Typography.
+body {
+	font-family: 'OpenSansRegular', sans-serif;
+}
+
 h2,
 h3,
 h4 {
 	font-family: 'CircularBlack', sans-serif;
+	.main-content_header & {
+		margin-top: 0;
+	}
 }
 
 p {
@@ -37,18 +44,24 @@ p {
 }
 
 a {
-	font-family: 'CircularBlack', sans-serif !important;
+	font-family: 'CircularBlack', sans-serif;
 	text-decoration: none;
 	color: $primary;
 }
 
-.main-nav {
-	li {
+.button {
+	font-family: 'CircularBlack', sans-serif;
+}
+
+li {
+	.main-nav & {
 		> span {
-			font-family: 'OpenSansRegular', sans-serif;
 			font-size: 14px;
 			display: block;
 			margin-top: 10px;
 		}
+	}
+	.main-content_content & {
+		margin-bottom: 10px;
 	}
 }
