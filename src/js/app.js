@@ -7,16 +7,36 @@ $(document).ready(function() {
 	$date.html(year);
 
 	// Main Navigation.
+	// $('.main-nav-link').each(function(index) {
+	// 	$(this).append(index);
+	// });
+
+
 	$('.main-nav-link').on('click', function(e) {
 
 		e.preventDefault();
 
 		var $active = $('.active');
+		var foo = $active.index();
 
-		if ( ! $(this).hasClass('disabled') ) {
-			$active.removeClass('active');
-			$(this).addClass('active');
-		}
+		$(this).append(foo);
+
+		// var $next = $active.next('.main-nav-link');
+		// // var $index = $next.index();
+		// var foo = $(this).index();
+		// $(this).append(foo);
+
+
+
+		// $(this).append($(this.index));
+
+		// console.log($next.index());
+
+		// if ( ! $(this).hasClass('disabled') ) {
+		// 	$active.removeClass('active');
+		// 	$(this).addClass('active');
+		// }
+
 	});
 
 	// Button Navigation.
@@ -24,11 +44,19 @@ $(document).ready(function() {
 
 		var $active = $('.main-content-item.active');
 		var $next = $active.next('.main-content-item');
+		var $next_index = $next.index();
 		var $prev = $active.prev('.main-content-item');
 
 		if ( $(this).hasClass('button-nav_next') && $next.length !== 0 ) {
-			$active.removeClass('active');
-			$next.addClass('active');
+
+			if ( $next_index !== 7 ) {
+				$active.removeClass('active');
+				$next.addClass('active');
+			} else {
+				$('.modal').css('display', 'block');
+				$('body').addClass('modal-active');
+			}
+
 		} else if ( $(this).hasClass('button-nav_prev') && $prev.length !== 0 ) {
 			$active.removeClass('active');
 			$prev.addClass('active');
