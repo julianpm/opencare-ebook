@@ -76,6 +76,14 @@ body {
 			background-color: #fff;
 			overflow: hidden;
 			border-radius: 41px;
+			&#start {
+				background-color: transparent;
+				border-radius: 0;
+				.main-content_header {
+					border-top-left-radius: 0;
+					border-top-right-radius: 0;
+				}
+			}
 			&.active {
 				display: block;
 			}
@@ -103,7 +111,7 @@ body {
 			.main-content_content {
 				padding: 30px;
 			}
-			p {
+			p:not(.ol-content) {
 				margin-top: 0;
 			}
 		}

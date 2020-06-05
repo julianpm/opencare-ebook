@@ -5,6 +5,11 @@
 }
 
 @font-face {
+	font-family: 'OpenSansBold';
+	src: url('../fonts/OpenSans/OpenSans-Bold-webfont.woff');
+}
+
+@font-face {
 	font-family: 'CircularBlack';
 	src: url('../fonts/Circular/CircularStd-Black.woff');
 }
@@ -17,6 +22,7 @@
 // Typography.
 body {
 	font-family: 'OpenSansRegular', sans-serif;
+	color: $text;
 }
 
 h2,
@@ -28,6 +34,12 @@ h4 {
 	}
 }
 
+h3 {
+	.main-content_header & {
+		margin: 0;
+	}
+}
+
 p {
 	font-family: 'OpenSansRegular', sans-serif;
 	header &,
@@ -36,10 +48,14 @@ p {
 	}
 	header & {
 		font-family: 'CircularBook', sans-serif;
-		color: $text;
 	}
 	footer & {
 		color: #F8F8F5;
+	}
+	.main-content_content & {
+		span {
+			font-family: 'OpenSansBold', sans-serif;
+		}
 	}
 }
 
@@ -63,5 +79,35 @@ li {
 	}
 	.main-content_content & {
 		margin-bottom: 10px;
+		> span {
+			font-family: 'OpenSansBold', sans-serif;
+		}
+	}
+}
+
+ol {
+	list-style: none;
+	counter-reset: counter;
+	> li {
+		position: relative;
+		counter-increment: counter;
+		&::before {
+			content: counter(counter) ". ";
+			font-family: 'OpenSansBold', sans-serif;
+			position: absolute;
+			left: -20px;
+		}
+	}
+}
+
+ul {
+	ol & {
+		margin-bottom: 20px;
+		li {
+			list-style-type: disc;
+			&::before {
+				content: none;
+			}
+		}
 	}
 }
