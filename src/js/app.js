@@ -66,7 +66,12 @@ $(document).ready(function() {
 
 
 	// Modal Toggle.
-	$(document).on('click', '.disabled > a', function(e) {
+	$('.button-modal').on('click', function() {
+		$('.modal').css('display', 'block');
+		$('body').addClass('modal-active');
+	});
+
+	$('.disabled > a').on('click', function(e) {
 
 		e.preventDefault();
 
@@ -75,14 +80,14 @@ $(document).ready(function() {
 
 	});
 
-	$(document).on('click', '.modal-close', function() {
+	$('.modal-close').on('click', function() {
 
 		$('.modal').css('display', 'none');
 		$('body').removeClass('modal-active');
 
 	});
 
-	$(document).on('click', '.modal-signup', function() {
+	$('.modal-signup').on('click', function() {
 
 		$('.modal').css('display', 'none');
 		$('body').removeClass('modal-active');
