@@ -137,14 +137,27 @@ $(document).ready(function() {
 	});
 
 
-	// Form Submit.
-	$('form').on('submit', function() {
+	// Signup and Set Local Storage.
+	var today = Date.now();
+	var expiry_date = 1000 * 60 * 60 * 24 * 365;
+	var signup = localStorage.getItem('opencareEbookSignup');
+	var $disabled = $('.main-nav-link.disabled');
 
-		$('.modal').removeClass('active');
-		$('body').removeClass('modal-active');
-		$('.main-nav-link.disabled').removeClass('disabled');
+	if ( null !== signup && today - signup < expiry_date ) {
 
-	});
+		$disabled.removeClass('disabled');
 
+	} else if ( null == signup || expiry_date < today - signup ) {
+
+		$('form').on('submit', function() {
+
+			$('.modal').removeClass('active');
+			$('body').removeClass('modal-active');
+			localStorage.setItem('opencareEbookSignup', today);
+			$disabled.removeClass('disabled');
+
+		});
+
+	}
 
 });
