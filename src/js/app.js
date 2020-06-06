@@ -10,10 +10,7 @@ $(document).ready(function() {
 
 	// Flyout Toggle.
 	$(document).on('click', '.flyout-toggle', function() {
-
-		var nav = $('.main-nav');
-		nav.toggleClass('active');
-
+		$('.main-nav').toggleClass('active');
 	});
 
 
@@ -32,24 +29,23 @@ $(document).ready(function() {
 
 		var $active = $('.main-content-item.active');
 		var $next = $active.next('.main-content-item');
-		var $next_index = $next.index();
 		var $prev = $active.prev('.main-content-item');
 		var $link_active = $('.main-nav-link.active');
-		var $link_next = $link_active.next('.main-nav-link');
-		var $link_prev = $link_active.prev('.main-nav-link');
+		var $link_active_next = $link_active.next('.main-nav-link');
+		var $link_active_prev = $link_active.prev('.main-nav-link');
 
 		if ( $(this).hasClass('button-nav_next') && $next.length !== 0 ) {
 
-			if ( $next_index !== 7 ) {
+			if ( ! $link_active_next.hasClass('disabled') ) {
 
 				$active.removeClass('active');
 				$next.addClass('active');
 				$link_active.removeClass('active');
-				$link_next.addClass('active');
+				$link_active_next.addClass('active');
 
 			} else {
 
-				$('.modal').css('display', 'block');
+				$('.modal').addClass('active');
 				$('body').addClass('modal-active');
 
 			}
@@ -59,41 +55,45 @@ $(document).ready(function() {
 			$active.removeClass('active');
 			$prev.addClass('active');
 			$link_active.removeClass('active');
-			$link_prev.addClass('active');
+			$link_active_prev.addClass('active');
 
 		}
 	});
 
 
 	// Modal Toggle.
-	$('.button-modal').on('click', function() {
-		$('.modal').css('display', 'block');
+	$(document).on('click', '.button-modal', function() {
+		$('.modal').addClass('active');
 		$('body').addClass('modal-active');
 	});
 
-	$('.disabled > a').on('click', function(e) {
+	$(document).on('click', '.disabled > a', function(e) {
 
 		e.preventDefault();
 
-		$('.modal').css('display', 'block');
+		$('.modal').addClass('active');
 		$('body').addClass('modal-active');
 
 	});
 
-	$('.modal-close').on('click', function() {
-
-		$('.modal').css('display', 'none');
+	$(document).on('click', '.modal-close', function() {
+		$('.modal').removeClass('active');
 		$('body').removeClass('modal-active');
-
 	});
 
-	$('.modal-signup').on('click', function() {
+	if ( ! $('body').hasClass('active') && ! $('.modal').hasClass('active') ) {
 
-		$('.modal').css('display', 'none');
-		$('body').removeClass('modal-active');
-		$('.disabled').removeClass('disabled');
+		$('body').on('click', function(event) {
 
-	});
+			if ( ! $(event.target).closest('.modal', '.button-modal').length ) {
+
+				$('body').find('.modal').removeClass('active');
+				$('body').removeClass('modal-active');
+
+			}
+		});
+
+	}
 
 
 	// Tabs Toggle.
@@ -134,6 +134,16 @@ $(document).ready(function() {
 
 			});
 		}
+	});
+
+
+	// Form Submit.
+	$('form').on('submit', function() {
+
+		$('.modal').removeClass('active');
+		$('body').removeClass('modal-active');
+		$('.main-nav-link.disabled').removeClass('disabled');
+
 	});
 
 
