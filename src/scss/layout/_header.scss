@@ -6,10 +6,6 @@ header {
 	align-items: center;
 	background-color: $primary;
 	padding: 15px 40px;
-	.logo {
-		max-width: 133px;
-		margin-bottom: 10px;
-	}
 	p {
 		text-align: center;
 	}
@@ -18,9 +14,6 @@ header {
 		align-items: center;
 		justify-content: space-between;
 		padding: 30px 81px;
-		.logo {
-			margin: 0;
-		}
 		p {
 			width: 60%;
 		}

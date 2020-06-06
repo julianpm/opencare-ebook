@@ -8,6 +8,7 @@
 	max-width: 186px;
 	transition: 0.3s ease-in-out;
 	z-index: 1;
+	overflow: auto;
 	&.active {
 		left: 0;
 	}
@@ -69,6 +70,10 @@
 		position: static;
 		flex: 1;
 		padding: 0;
+		margin-right: 20px;
+	}
+	@media (min-width: $lg_breakpoint) {
+		margin-right: 0;
 	}
 }
 
