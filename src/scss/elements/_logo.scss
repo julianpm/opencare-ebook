@@ -1,0 +1,14 @@
+.logo {
+	header & {
+		max-width: 133px;
+		margin-bottom: 10px;
+		@media (min-width: $lg_breakpoint) {
+			margin: 0;
+		}
+	}
+	.modal & {
+		display: block;
+		max-width: 114px;
+		margin: 0 auto;
+	}
+}
