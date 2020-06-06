@@ -1,10 +1,15 @@
+button,
+.button {
+	cursor: pointer;
+	outline-width: 0px;
+}
+
 .button {
 	border-radius: 20.4px;
 	border: none;
-	cursor: pointer;
 
 	// Header Button.
-	&.button-header {
+	&.button-primary {
 		background-color: $secondary;
 		color: #fff;
 		padding: 12px 38px;
@@ -33,6 +38,34 @@
 	}
 }
 
+// Modal Close Button.
+.modal-close {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	border: none;
+	background-color: transparent;
+	span {
+		position: absolute;
+		left: 0;
+		background-color: $text;
+		height: 3px;
+		width: 20px;
+		border-radius: 20px;
+		&:first-of-type {
+			transform: rotate(45deg);
+		}
+		&:last-of-type {
+			transform: rotate(-45deg);
+		}
+	}
+	@media (min-width: $md_breakpoint) {
+		top: 40px;
+		right: 40px;
+	}
+}
+
+// Flyout Toggle Button.
 .flyout-toggle {
 	position: absolute;
 	left: 5px;
