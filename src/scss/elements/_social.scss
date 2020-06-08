@@ -8,22 +8,10 @@
 	background-color: $primary;
 	padding: 39px 12px;
 	border-radius: 41px;
-	img {
-		margin-bottom: 32px;
+	a {
+		margin-bottom: 24px;
 		&:last-of-type {
 			margin-bottom: 0;
-		}
-		&.facebook {
-			width: 10px;
-			height: 19px;
-		}
-		&.twitter {
-			width: 17px;
-			height: 14px;
-		}
-		&.linkedin {
-			width: 16px;
-			height: 16px;
 		}
 	}
 	@media (min-width: $lg_breakpoint) {
