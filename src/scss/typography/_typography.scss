@@ -25,6 +25,7 @@ body {
 	color: $text;
 }
 
+h1,
 h2,
 h3,
 h4 {
@@ -34,14 +35,19 @@ h4 {
 	}
 }
 
-h3 {
+h1 {
+	font-size: 40px;
+	margin-top: 0;
 	.main-content_header & {
-		margin: 0;
+		font-size: 30px;
+		margin-bottom: 0;
+		line-height: 36px;
 	}
 }
 
 p {
 	font-family: 'OpenSansRegular', sans-serif;
+	line-height: 23px;
 	header &,
 	footer & {
 		margin: 0;
@@ -51,6 +57,26 @@ p {
 	}
 	footer & {
 		color: #F8F8F5;
+	}
+	&.lead {
+		font-family: 'OpenSansBold', sans-serif;
+		&::before {
+			content: '';
+			display: block;
+			position: relative;
+			height: 2px;
+			width: 38px;
+			background-color: #fff;
+			margin: 15px 0;
+			@media (min-width: $lg_breakpoint) {
+				left: -13px;
+			}
+		}
+	}
+	&.author {
+		font-size: 12px;
+		line-height: 17px;
+		margin-bottom: 0;
 	}
 	.main-content_content & {
 		span {
