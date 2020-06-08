@@ -83,6 +83,9 @@ body {
 			&#start {
 				background-color: transparent;
 				border-radius: 0;
+				img {
+					width: 100%;
+				}
 				.main-content_header {
 					border-top-left-radius: 0;
 					border-top-right-radius: 0;
@@ -100,20 +103,6 @@ body {
 				border-top-left-radius: 41px;
 				border-top-right-radius: 41px;
 				color: #fff;
-				h2 {
-					&::before {
-						content: '';
-						display: block;
-						position: relative;
-						height: 2px;
-						width: 38px;
-						background-color: #fff;
-						margin: 15px 0;
-					}
-				}
-				p {
-					margin: 0;
-				}
 			}
 			.main-content_content {
 				padding: 30px 20px;
@@ -130,11 +119,11 @@ body {
 				overflow: auto;
 				height: 625px;
 				&#start {
-					display: flex;
-					justify-content: center;
+					overflow: visible;
 					height: auto;
 					.main-content_content {
 						width: 60%;
+						margin: 0 auto;
 					}
 				}
 				.main-content_header,
@@ -152,11 +141,6 @@ body {
 				.main-content_header,
 				.main-content_content {
 					padding: 36px 80px;
-				}
-				.main-content_header {
-					h2::before {
-						left: -13px;
-					}
 				}
 			}
 		}
