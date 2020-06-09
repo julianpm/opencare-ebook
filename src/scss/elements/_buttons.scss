@@ -28,8 +28,12 @@ button,
 			margin: 0 12px;
 		}
 		&_prev {
+			display: none;
 			color: $footer_bg;
 			background-color: transparent;
+			&.active {
+				display: block;
+			}
 		}
 		&_next {
 			background-color: $footer_bg;

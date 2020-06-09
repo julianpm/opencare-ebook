@@ -33,6 +33,9 @@ $(document).ready(function() {
 		var $link_active = $('.main-nav-link.active');
 		var $link_active_next = $link_active.next('.main-nav-link');
 		var $link_active_prev = $link_active.prev('.main-nav-link');
+		var $button_prev = $('.button-nav_prev');
+
+		$(document).scrollTop(0);
 
 		if ( $(this).hasClass('button-nav_next') && $next.length !== 0 ) {
 
@@ -42,6 +45,7 @@ $(document).ready(function() {
 				$next.addClass('active');
 				$link_active.removeClass('active');
 				$link_active_next.addClass('active');
+				$button_prev.addClass('active');
 
 			} else {
 
@@ -56,6 +60,7 @@ $(document).ready(function() {
 			$prev.addClass('active');
 			$link_active.removeClass('active');
 			$link_active_prev.addClass('active');
+			$button_prev.removeClass('active');
 
 		}
 	});
@@ -100,6 +105,14 @@ $(document).ready(function() {
 	$(document).on('click', '.main-nav-link > a', function(e) {
 
 		e.preventDefault();
+
+		$button = $('.button-nav_prev');
+
+		if ( $(this).parent().prev('.main-nav-link').length !== 0 ) {
+			$button.addClass('active');
+		} else {
+			$button.removeClass('active');
+		}
 
 		if ( ! $(this).parent().hasClass('disabled') ) {
 
@@ -149,15 +162,24 @@ $(document).ready(function() {
 
 	} else if ( null == signup || expiry_date < today - signup ) {
 
-		$('form').on('submit', function() {
+		$(document).on('submit', 'form', function(event) {
 
+			var $active = $('.main-nav-link.active');
+			var $next = $active.next('.main-nav-link');
+			var $content_active = $('.main-content-item.active');
+			var $content_next = $content_active.next('.main-content-item');
+
+			event.preventDefault();
 			$('.modal').removeClass('active');
 			$('body').removeClass('modal-active');
 			localStorage.setItem('opencareEbookSignup', today);
 			$disabled.removeClass('disabled');
+			$active.removeClass('active');
+			$next.addClass('active');
+			$content_active.removeClass('active');
+			$content_next.addClass('active');
 
 		});
-
 	}
 
 });
