@@ -5,7 +5,7 @@
 	left: -220px;
 	padding: 16px 8px;
 	background-color: #F7F9F6;
-	max-width: 186px;
+	max-width: 220px;
 	transition: 0.3s ease-in-out;
 	z-index: 1;
 	overflow: auto;
@@ -68,6 +68,7 @@
 	}
 	@media (min-width: $md_breakpoint) {
 		position: static;
+		max-width: 186px;
 		flex: 1;
 		padding: 0;
 		margin-right: 20px;

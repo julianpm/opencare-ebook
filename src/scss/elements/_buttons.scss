@@ -41,13 +41,15 @@ button,
 // Modal Close Button.
 .modal-close {
 	position: absolute;
+	height: 18px;
 	top: 30px;
 	right: 30px;
 	border: none;
 	background-color: transparent;
 	span {
 		position: absolute;
-		left: 0;
+		top: 7px;
+		left: -2px;
 		background-color: $text;
 		height: 3px;
 		width: 20px;
