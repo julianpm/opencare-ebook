@@ -10,12 +10,14 @@ button,
 
 	// Header Button.
 	&.button-primary {
+		font-size: 6.5px;
 		background-color: $secondary;
 		color: #fff;
-		padding: 12px 38px;
-		margin: 10px auto 0 auto;
+		padding: 8px 12px;
 		@media (min-width: $lg_breakpoint) {
+			font-size: 16px;
 			margin: 0;
+			padding: 12px 38px;
 		}
 	}
 
@@ -84,9 +86,28 @@ button,
 
 // Flyout Toggle Button.
 .flyout-toggle {
-	position: absolute;
-	left: 5px;
-	bottom: 5px;
+	display: block;
+	position: relative;
+	background: none;
+	border: none;
+	height: 10px;
+	span {
+		position: absolute;
+		height: 2px;
+		width: 16px;
+		background-color: $text;
+		border-radius: 3px;
+		&:first-of-type {
+			top: 0;
+		}
+		&:nth-of-type(2) {
+			top: 50%;
+			transform: translate3d(0, -50%, 0);
+		}
+		&:last-of-type {
+			bottom: 0;
+		}
+	}
 	@media (min-width: $md_breakpoint) {
 		display: none;
 	}

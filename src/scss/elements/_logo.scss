@@ -1,14 +1,28 @@
 .logo {
 	header & {
-		max-width: 133px;
-		margin-bottom: 10px;
-		@media (min-width: $lg_breakpoint) {
-			margin: 0;
+		display: none;
+		@media (min-width: $md_breakpoint) {
+			display: block;
+			img {
+				max-width: 133px;
+			}
 		}
 	}
-	.modal & {
-		display: block;
-		max-width: 114px;
-		margin: 0 auto;
-	}
 }
+
+// .logo {
+// 	header & {
+// 		display: none;
+// 		max-width: 133px;
+// 		margin-bottom: 10px;
+// 		@media (min-width: $lg_breakpoint) {
+// 			display: block;
+// 			margin: 0;
+// 		}
+// 	}
+// 	.modal & {
+// 		display: block;
+// 		max-width: 114px;
+// 		margin: 0 auto;
+// 	}
+// }

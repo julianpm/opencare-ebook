@@ -1,21 +1,22 @@
 header {
 	position: relative;
 	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
+	justify-content: space-between;
 	align-items: center;
 	background-color: $primary;
-	padding: 15px 40px;
+	padding: 15px 20px;
 	p {
+		position: relative;
+		left: 15px;
 		text-align: center;
 	}
 	@media (min-width: $lg_breakpoint) {
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
-		padding: 30px 81px;
+		padding: 30px 60px;
 		p {
-			width: 60%;
+			position: static;
 		}
 	}
 }

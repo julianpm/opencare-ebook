@@ -54,7 +54,18 @@ p {
 	}
 	header & {
 		font-family: 'CircularBlack', sans-serif;
-		font-size: 18px;
+		font-size: 11px;
+		span {
+			display: none;
+		}
+		@media (min-width: $md_breakpoint) {
+			span {
+				display: inline;
+			}
+		}
+		@media (min-width: $lg_breakpoint) {
+			font-size: 18px;
+		}
 	}
 	footer & {
 		color: #F8F8F5;
@@ -98,10 +109,31 @@ a {
 
 li {
 	.main-nav & {
+		a {
+			font-size: 11px;
+		}
+		&:first-of-type {
+			a {
+				font-size: 18px;
+			}
+		}
 		> span {
-			font-size: 14px;
+			font-size: 8.5px;
 			display: block;
 			margin-top: 10px;
+		}
+		@media (min-width: $md_breakpoint) {
+			a {
+				font-size: 16px;
+			}
+			&:first-of-type {
+				a {
+					font-size: 26px;
+				}
+			}
+			> span {
+				font-size: 12px;
+			}
 		}
 	}
 	.main-content_content & {
