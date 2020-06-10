@@ -14,6 +14,8 @@
 </head>
 <body>
 
+	<!-- <script type="text/javascript"  id="hs-script-loader" async defer src="https://js.hs-scripts.com/2504919.js"></script> -->
+
 	<!-- Sign up notice. -->
 	<div id="modal" class="modal">
 		<a href="https://opencare.com" target="_blank">
@@ -30,10 +32,20 @@
 				<p>Put your practice in the best position to succssefully reopen by getting access to insight on how to unlock revenue and make your practice perfect.</p>
 			</div>
 		</div>
-		<!-- <form action="#">
-			<input type="email" placeholder="Email">
-			<input type="submit" value="Submit">
-		</form> -->
+				<!--[if lte IE 8]>
+		<script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/v2-legacy.js"></script>
+		<![endif]-->
+		<script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/v2.js"></script>
+		<script>
+			hbspt.forms.create({
+			portalId: "2504919",
+			formId: "865b473f-2974-444e-8051-5fa4e70d754b",
+			target: '#modal',
+			onFormSubmit: function() {
+
+			}
+		});
+		</script>
 	</div>
 
 	<!-- Social Media. -->
@@ -522,16 +534,5 @@
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
 	crossorigin="anonymous"></script>
 	<script src="assets/js/app.min.js"></script>
-			<!--[if lte IE 8]>
-		<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-		<![endif]-->
-		<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-		<script>
-			hbspt.forms.create({
-			portalId: "2504919",
-			formId: "865b473f-2974-444e-8051-5fa4e70d754b",
-			target: '#modal'
-		});
-		</script>
 </body>
 </html>
