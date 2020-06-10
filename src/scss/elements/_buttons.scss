@@ -27,17 +27,28 @@ button,
 		@media (min-width: $md_breakpoint) {
 			margin: 0 12px;
 		}
-		&_prev {
+		&_prev,
+		&_finish {
 			display: none;
-			color: $footer_bg;
-			background-color: transparent;
 			&.active {
 				display: block;
 			}
 		}
+		&_next,
+		&_finish {
+			background-color: $footer_bg;
+			color: #fff;
+		}
+		&_prev {
+			color: $footer_bg;
+			background-color: transparent;
+		}
 		&_next {
 			background-color: $footer_bg;
 			color: #fff;
+			&.hide {
+				display: none;
+			}
 		}
 	}
 }
