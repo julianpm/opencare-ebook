@@ -8,14 +8,17 @@
 	<meta property="og:title" content="Ready to reopen your dental office in the wake of COVID-19?">
 	<meta property="og:description" content="Share these tips and tricks with other dentists in your network">
 	<meta property="og:url" content="">
+	<link rel="icon" type="image/png" href="assets/images/favicon.png"/>
 	<title>Opencare E-book</title>
 	<link rel="stylesheet" href="assets/css/app.min.css">
 </head>
 <body>
 
 	<!-- Sign up notice. -->
-	<div class="modal">
-		<img class="logo" src="assets/images/Logo.png" alt="">
+	<div id="modal" class="modal">
+		<a href="https://opencare.com" target="_blank">
+			<img class="logo" src="assets/images/Logo.png" alt="">
+		</a>
 		<button class="modal-close">
 			<span></span>
 			<span></span>
@@ -27,10 +30,10 @@
 				<p>Put your practice in the best position to succssefully reopen by getting access to insight on how to unlock revenue and make your practice perfect.</p>
 			</div>
 		</div>
-		<form action="#">
+		<!-- <form action="#">
 			<input type="email" placeholder="Email">
 			<input type="submit" value="Submit">
-		</form>
+		</form> -->
 	</div>
 
 	<!-- Social Media. -->
@@ -50,7 +53,9 @@
 
 	<!-- Header. -->
 	<header>
-		<img class="logo" src="assets/images/Logo.png" alt="Opencare logo">
+		<a href="https://opencare.com" target="_blank">
+			<img class="logo" src="assets/images/Logo.png" alt="Opencare logo">
+		</a>
 		<p>The Ultimate Guide to Reopening Your Practice in the Wake of COVID-19.</p>
 		<button class="button button-primary button-modal">Get the full guide</button>
 		<button class="flyout-toggle">FLY</button>
@@ -95,7 +100,7 @@
 				<div class="main-content">
 
 					<!-- Start. -->
-					<div id="start" class="main-content-item active">
+					<div id="start" class="main-content-item start active">
 						<div class="main-content_content">
 							<img src="assets/images/Book Cover cropped.png" alt="Book cover">
 							<h1>Ready to reopen?</h1>
@@ -419,7 +424,7 @@
 					</div>
 
 					<!-- Chapter 7 -->
-					<div id="chapter7" class="main-content-item">
+					<div id="chapter7" class="main-content-item last">
 						<div class="main-content_header">
 							<h1>Chapter 7:</h1>
 							<p class="lead">Becoming the practice you’ve always wanted to be</p>
@@ -501,6 +506,7 @@
 				<div class="button-nav-wrapper">
 					<button class="button button-nav button-nav_prev">Back</button>
 					<button class="button button-nav button-nav_next">Next</button>
+					<a href="https://opencare.com/for-dentists" class="button button-nav button-nav_finish">Visit opencare.com</a>
 				</div>
 			</div>
 		</section>
@@ -516,5 +522,16 @@
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
 	crossorigin="anonymous"></script>
 	<script src="assets/js/app.min.js"></script>
+			<!--[if lte IE 8]>
+		<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+		<![endif]-->
+		<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+		<script>
+			hbspt.forms.create({
+			portalId: "2504919",
+			formId: "865b473f-2974-444e-8051-5fa4e70d754b",
+			target: '#modal'
+		});
+		</script>
 </body>
 </html>
