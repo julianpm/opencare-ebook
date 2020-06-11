@@ -37,8 +37,8 @@ $(document).ready(function() {
 		var $button_next = $('.button-nav_next');
 		var $finish = $('.button-nav_finish');
 
-		if ( $(document).width < 768 ) {
-			$(document).scrollTop(0);
+		if ( $(document).width() < 768 ) {
+			$('html').scrollTop(0);
 		}
 
 		if ( $(this).hasClass('button-nav_next') && $next.length !== 0 ) {
