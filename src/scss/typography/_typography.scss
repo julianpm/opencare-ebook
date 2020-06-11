@@ -89,9 +89,13 @@ p {
 	}
 	&.lead {
 		font-family: 'OpenSansBold', sans-serif;
-		font-size: 40px;
-		line-height: 60px;
+		font-size: 30px;
+		line-height: 40px;
 		margin-bottom: 20px;
+		@media (min-width: $md_breakpoint) {
+			font-size: 40px;
+			line-height: 60px;
+		}
 	}
 	&.author {
 		font-size: 12px;
