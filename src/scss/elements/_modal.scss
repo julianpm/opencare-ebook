@@ -32,7 +32,7 @@
 		border-radius: 41px;
 		min-width: 660px;
 		min-height: 400px;
-		padding: 62px 80px 96px 80px;
+		padding: 62px 60px;
 		.modal-content {
 			display: flex;
 			align-items: center;
@@ -45,7 +45,7 @@
 	@media (min-width: $lg_breakpoint) {
 		min-width: 860px;
 		min-height: 600px;
-		padding: 62px 150px 96px 150px;
+		padding: 62px 120px;
 		.modal-content {
 			margin-top: 40px;
 		}
