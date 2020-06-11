@@ -23,9 +23,9 @@ button,
 
 	// Nav Button.
 	&.button-nav {
-		border: 2px solid $footer_bg;
 		padding: 10px 32px;
 		margin: 0 6px;
+		transition: ease-in 0.3s;
 		@media (min-width: $md_breakpoint) {
 			margin: 0 12px;
 		}
@@ -38,16 +38,23 @@ button,
 		}
 		&_next,
 		&_finish {
-			background-color: $footer_bg;
+			background-color: $tertiary;
 			color: #fff;
 		}
 		&_prev {
-			color: $footer_bg;
-			background-color: transparent;
+			color: $tertiary;
+			background-color: rgba(83, 112, 135, 0);
+			border: 2px solid $tertiary;
+			&:hover {
+				background-color: rgba(83, 112, 135, 0.16);
+			}
 		}
 		&_next {
-			background-color: $footer_bg;
+			background-color: rgba(83, 112, 135, 1);
 			color: #fff;
+			&:hover {
+				background-color: rgba(83, 112, 135, 0.8);
+			}
 			&.hide {
 				display: none;
 			}
