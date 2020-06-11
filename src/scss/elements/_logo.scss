@@ -4,7 +4,12 @@
 		@media (min-width: $md_breakpoint) {
 			display: block;
 			img {
-				max-width: 133px;
+				max-width: 90px;
+			}
+		}
+		@media (min-width: $lg_breakpoint) {
+			img {
+				max-width: 133px;;
 			}
 		}
 	}

@@ -97,9 +97,11 @@ button,
 	position: relative;
 	background: none;
 	border: none;
+	width: 18px;
 	height: 10px;
 	span {
 		position: absolute;
+		left: 0;
 		height: 2px;
 		width: 16px;
 		background-color: $text;

@@ -5,10 +5,23 @@ header {
 	align-items: center;
 	background-color: $primary;
 	padding: 15px 20px;
+	.header-left,
+	.header-right {
+		width: 25%;
+	}
+	.header-right {
+		display: flex;
+		justify-content: flex-end;
+	}
 	p {
-		position: relative;
-		left: 15px;
+		width: 50%;
 		text-align: center;
+	}
+	@media (min-width: $md_breakpoint) {
+		.header-left,
+		.header-right {
+			width: auto;
+		}
 	}
 	@media (min-width: $lg_breakpoint) {
 		flex-direction: row;
@@ -16,6 +29,7 @@ header {
 		justify-content: space-between;
 		padding: 30px 60px;
 		p {
+			width: auto;
 			position: static;
 		}
 	}
