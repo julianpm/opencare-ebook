@@ -174,7 +174,6 @@ $(document).ready(function() {
 		}
 	});
 
-
 	// Signup and Set Local Storage.
 	var today = Date.now();
 	var expiry_date = 1000 * 60 * 60 * 24 * 365;
@@ -182,29 +181,7 @@ $(document).ready(function() {
 	var $disabled = $('.main-nav-link.disabled');
 
 	if ( null !== signup && today - signup < expiry_date ) {
-
 		$disabled.removeClass('disabled');
-
-	} else if ( null == signup || expiry_date < today - signup ) {
-
-		$(document).on('submit', 'form', function(event) {
-
-			var $active = $('.main-nav-link.active');
-			var $next = $active.next('.main-nav-link');
-			var $content_active = $('.main-content-item.active');
-			var $content_next = $content_active.next('.main-content-item');
-
-			event.preventDefault();
-			$('.modal').removeClass('active');
-			$('body').removeClass('modal-active');
-			localStorage.setItem('opencareEbookSignup', today);
-			$disabled.removeClass('disabled');
-			$active.removeClass('active');
-			$next.addClass('active');
-			$content_active.removeClass('active');
-			$content_next.addClass('active');
-
-		});
 	}
 
 });

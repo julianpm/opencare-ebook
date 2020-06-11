@@ -41,6 +41,26 @@
 			target: '#modal',
 			onFormSubmit: function() {
 
+				setTimeout(function() {
+
+					var today = Date.now();
+					var $active = $('.main-nav-link.active');
+					var $next = $active.next('.main-nav-link');
+					var $content_active = $('.main-content-item.active');
+					var $content_next = $content_active.next('.main-content-item');
+					var $disabled = $('.main-nav-link.disabled');
+
+					localStorage.setItem('opencareEbookSignup', today);
+					$('#modal').removeClass('active');
+					$('body').removeClass('modal-active');
+					$active.removeClass('active');
+					$next.addClass('active');
+					$content_active.removeClass('active');
+					$content_next.addClass('active');
+					$disabled.removeClass('disabled');
+
+				}, 3000);
+
 			}
 		});
 		</script>
