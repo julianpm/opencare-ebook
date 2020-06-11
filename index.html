@@ -51,14 +51,18 @@
 					var $disabled = $('.main-nav-link.disabled');
 
 					localStorage.setItem('opencareEbookSignup', today);
-					$('#modal').removeClass('active');
+					$('#modal').fadeOut('slow');
 					$('body').removeClass('modal-active');
-					$active.removeClass('active');
-					$next.addClass('active');
-					$content_active.removeClass('active');
-					$content_next.addClass('active');
 					$disabled.removeClass('disabled');
 
+					if ( $active.next('.main-nav-link').hasClass('chapter6') ) {
+
+						$active.removeClass('active');
+						$next.addClass('active');
+						$content_active.removeClass('active');
+						$content_next.addClass('active');
+
+					}
 				}, 3000);
 
 			}
