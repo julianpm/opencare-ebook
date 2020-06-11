@@ -36,12 +36,26 @@ h4 {
 }
 
 h1 {
-	font-size: 40px;
 	margin-top: 0;
+	font-size: 40px;
+}
+
+h2 {
+	font-size: 48px;
+	margin: 0;
 	.main-content_header & {
 		font-size: 30px;
 		margin-bottom: 0;
 		line-height: 36px;
+		&::after {
+			content: '';
+			display: block;
+			position: relative;
+			height: 2px;
+			width: 38px;
+			background-color: #fff;
+			margin: 15px 0;
+		}
 	}
 }
 
@@ -72,18 +86,9 @@ p {
 	}
 	&.lead {
 		font-family: 'OpenSansBold', sans-serif;
-		&::before {
-			content: '';
-			display: block;
-			position: relative;
-			height: 2px;
-			width: 38px;
-			background-color: #fff;
-			margin: 15px 0;
-			@media (min-width: $lg_breakpoint) {
-				left: -13px;
-			}
-		}
+		font-size: 40px;
+		line-height: 60px;
+		margin-bottom: 20px;
 	}
 	&.author {
 		font-size: 12px;
