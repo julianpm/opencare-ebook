@@ -95,6 +95,11 @@ body {
 					padding: 0;
 				}
 			}
+			&#intro {
+				.main-content_header {
+					background-color: $tertiary;
+				}
+			}
 			&.active {
 				display: block;
 			}
@@ -138,6 +143,7 @@ body {
 		max-width: 765px;
 		margin: 17px auto 0 auto;
 		.main-content {
+			width: 100%;
 			.main-content-item {
 				.main-content_header,
 				.main-content_content {
