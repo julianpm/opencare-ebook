@@ -200,7 +200,8 @@ body {
 				}
 			}
 		}
-		&:nth-of-type(5) {
+		&:nth-of-type(5),
+		&:nth-of-type(7) {
 			img {
 				display: block;
 				width: 70%;
