@@ -92,7 +92,9 @@ body {
 					padding: 0;
 				}
 			}
-			&#intro {
+			&#intro,
+			&:nth-of-type(8),
+			&:nth-of-type(9) {
 				.main-content_header {
 					background-color: $tertiary;
 				}
@@ -163,9 +165,11 @@ body {
 		&:nth-of-type(6),
 		&:nth-of-type(8),
 		&:nth-of-type(9) {
-			img {
-				width: 100%;
-				margin: 20px 0;
+			.main-content_content {
+				img {
+					width: 100%;
+					margin: 20px 0;
+				}
 			}
 		}
 		&:nth-of-type(4) {
@@ -202,16 +206,20 @@ body {
 		}
 		&:nth-of-type(5),
 		&:nth-of-type(7) {
-			img {
-				display: block;
-				width: 70%;
-				margin: 20px auto;
+			.main-content_content {
+				img {
+					display: block;
+					width: 70%;
+					margin: 20px auto;
+				}
 			}
 		}
 		&:nth-of-type(8) {
-			img {
-				display: block;
-				margin: 0 auto;
+			.main-content_content {
+				img {
+					display: block;
+					margin: 0 auto;
+				}
 			}
 		}
 	}

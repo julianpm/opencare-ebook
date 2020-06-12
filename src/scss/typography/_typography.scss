@@ -161,9 +161,11 @@ li {
 		}
 	}
 	.main-content_content & {
-		margin-bottom: 10px;
+		margin-bottom: 15px;
 		> span {
+			display: block;
 			font-family: 'OpenSansBold', sans-serif;
+			margin-bottom: 5px;
 		}
 	}
 }
@@ -171,6 +173,7 @@ li {
 ol {
 	list-style: none;
 	counter-reset: counter;
+	padding-left: 20px;
 	> li {
 		position: relative;
 		counter-increment: counter;
@@ -183,16 +186,11 @@ ol {
 	}
 }
 
-ul {
-	ol & {
-		margin-bottom: 20px;
-		li {
-			list-style-type: disc;
-			&::before {
-				content: none;
-			}
-		}
-	}
+hr {
+	height: 1px;
+	background-color: $text;
+	border: none;
+	margin: 10px 0;
 }
 
 .italics {
