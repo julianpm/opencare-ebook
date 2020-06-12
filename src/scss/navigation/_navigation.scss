@@ -103,7 +103,9 @@
 	display: flex;
 	justify-content: center;
 	margin-top: 20px;
-	@media (min-width: $md_breakpoint) {
+	width: 90%;
+	@media (min-width: $lg_breakpoint) {
+		width: 100%;
 		margin-top: 40px;
 	}
 }
