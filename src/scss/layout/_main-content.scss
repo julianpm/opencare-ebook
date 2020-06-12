@@ -165,10 +165,12 @@ body {
 		&:nth-of-type(9) {
 			img {
 				width: 100%;
+				margin: 20px 0;
 			}
 		}
 		&:nth-of-type(4) {
 			.icons-wrapper {
+				margin: 40px 0;
 				img {
 					display: block;
 					margin: 0 auto 20px auto;
@@ -202,10 +204,9 @@ body {
 			img {
 				display: block;
 				width: 70%;
-				margin: 0 auto;
+				margin: 20px auto;
 			}
 		}
-		&:nth-of-type(5),
 		&:nth-of-type(8) {
 			img {
 				display: block;

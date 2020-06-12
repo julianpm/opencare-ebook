@@ -120,6 +120,7 @@ a {
 		color: $primary;
 	}
 	.main-content_content & {
+		color: $text;
 		#intro & {
 			color: $tertiary;
 		}
@@ -192,4 +193,8 @@ ul {
 			}
 		}
 	}
+}
+
+.italics {
+	font-style: italic;
 }
