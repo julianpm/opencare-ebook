@@ -155,7 +155,10 @@ body {
 .main-content {
 	.main-content-item {
 		&#start,
-		&:nth-of-type(3) {
+		&:nth-of-type(3),
+		&:nth-of-type(6),
+		&:nth-of-type(8),
+		&:nth-of-type(9) {
 			img {
 				width: 100%;
 			}
@@ -189,6 +192,13 @@ body {
 						}
 					}
 				}
+			}
+		}
+		&:nth-of-type(5) {
+			img {
+				display: block;
+				width: 70%;
+				margin: 0 auto;
 			}
 		}
 		&:nth-of-type(5),
