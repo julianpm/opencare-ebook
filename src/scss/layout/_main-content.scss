@@ -140,13 +140,17 @@ body {
 		max-width: 765px;
 		margin: 17px auto 0 auto;
 		.main-content {
-			width: 100%;
 			.main-content-item {
 				.main-content_header,
 				.main-content_content {
 					padding: 36px 80px;
 				}
 			}
+		}
+	}
+	@media (min-width: 1200px) {
+		.main-content {
+			width: 100%;
 		}
 	}
 }

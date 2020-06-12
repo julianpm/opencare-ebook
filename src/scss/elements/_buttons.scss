@@ -10,13 +10,15 @@ button,
 
 	// Header Button.
 	&.button-primary {
-		font-size: 6.5px;
 		background-color: $secondary;
 		color: #fff;
 		padding: 8px 12px;
+		font-size: 6.5px;
+		.cta & {
+			font-size: 13px;
+		}
 		@media (min-width: $lg_breakpoint) {
 			font-size: 16px;
-			margin: 0;
 			padding: 12px 38px;
 		}
 	}

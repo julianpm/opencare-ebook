@@ -27,8 +27,7 @@ body {
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
 	font-family: 'CircularBlack', sans-serif;
 	.main-content_header & {
 		margin-top: 0;
@@ -60,6 +59,11 @@ h2 {
 			margin: 15px 0;
 		}
 	}
+}
+
+h3 {
+	font-size: 18px;
+	line-height: 23px;
 }
 
 p {
@@ -110,9 +114,16 @@ p {
 }
 
 a {
-	font-family: 'CircularBlack', sans-serif;
-	text-decoration: none;
-	color: $primary;
+	.main-nav & {
+		font-family: 'CircularBlack', sans-serif;
+		text-decoration: none;
+		color: $primary;
+	}
+	.main-content_content & {
+		#intro & {
+			color: $tertiary;
+		}
+	}
 }
 
 .button {

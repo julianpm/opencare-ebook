@@ -1,0 +1,21 @@
+.cta {
+	background-color: $primary;
+	padding: 20px;
+	text-align: center;
+	img {
+		width: 40%;
+	}
+	@media (min-width: $md_breakpoint) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: left;
+		img {
+			width: 180px;
+			margin-right: 20px;
+		}
+		div {
+			width: 33%;
+		}
+	}
+}
