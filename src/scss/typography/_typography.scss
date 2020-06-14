@@ -106,6 +106,10 @@ p {
 		line-height: 17px;
 		margin-bottom: 0;
 	}
+	&.quote {
+		color: $secondary;
+		font-style: italic;
+	}
 	.main-content_content & {
 		span {
 			font-family: 'OpenSansBold', sans-serif;
