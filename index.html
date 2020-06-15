@@ -3,11 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="robots" content="noindex, nofollow">
+	<meta property="og:site_name" content="Opencare" />
 	<meta property="og:image" content="">
 	<meta property="og:title" content="Ready to reopen your dental office in the wake of COVID-19?">
-	<meta property="og:description" content="Share these tips and tricks with other dentists in your network">
-	<meta property="og:url" content="">
+	<meta property="og:description" content="Share these tips and tricks with other dentists in your network.">
+	<meta property="og:url" content="https://opencare.com/dentist-guide-to-reopening">
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@opencare" />
+	<meta name="twitter:site" content="@opencare" />
+	<meta name="description" content="Share these tips and tricks with other dentists in your network." />
+	<meta property="og:type" content="article" />
 	<link rel="icon" type="image/png" href="assets/images/favicon.png"/>
 	<title>Opencare E-book</title>
 	<link rel="stylesheet" href="assets/css/app.min.css">
@@ -80,9 +85,15 @@
 			<img class="twitter" src="assets/images/twitter.svg" alt="Twitter logo">
 		</a>
 
-		<a href="https://www.linkedin.com/shareArticle?url=https://opencare.com/&title=Share%20these%20tips%20and%20tricks%20with%20other%20dentists%20in%20your%20network" target="_blank">
+		<a href="https://www.linkedin.com/shareArticle?url=http://julianmeanchoff.com/opencare-ebook/&title=Share%20these%20tips%20and%20tricks%20with%20other%20dentists%20in%20your%20network" target="_blank">
 			<img class="linkedin" src="assets/images/linkedin.svg" alt="LinkedIn logo">
 		</a>
+
+		<a href="mailto:?subject=Read this!&body=Here's a great post about: <?php echo esc_url( get_permalink() ); ?>" class="fas fa-envelope">
+			<span class="sr-only">email</span>
+		</a>
+
+		<a href="sms:?&body=Hello World">SMS</a>
 	</div>
 
 	<!-- Header. -->
