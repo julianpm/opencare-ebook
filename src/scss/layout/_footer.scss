@@ -2,7 +2,24 @@ footer {
 	background-color: $tertiary;
 	padding: 20px 58px;
 	text-align: center;
+	flex-shrink: 0;
 	@media (min-width: $md_breakpoint) {
 		text-align: right;
 	}
+}
+
+// Sticky Footer.
+html {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.container {
+	flex: 1 0 auto;
+	// padding: 20px;
 }
