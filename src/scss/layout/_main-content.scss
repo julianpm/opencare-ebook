@@ -81,6 +81,17 @@ body {
 			background-color: #fff;
 			overflow: hidden;
 			border-radius: 41px;
+			background-color: transparent;
+			&::-webkit-scrollbar {
+				-webkit-appearance: none;
+				width: 7px;
+				position: absolute;
+			}
+			&::-webkit-scrollbar-thumb {
+					border-radius: 4px;
+					background-color: rgba(0, 0, 0, 0.4);
+					box-shadow: 0 0 1px rgba(255,255,255,.5);
+			}
 			&#start {
 				background-color: transparent;
 				border-radius: 0;
